@@ -1,8 +1,8 @@
 # InazumaQuery
 
-InazumaQuery is a C API for querying and comparing Inazuma Eleven player stats.
+**InazumaQuery** is a performance-oriented C library designed for structured querying and predicate-based filtering of character attribute datasets. 
 
-I'Ve created this project because i couldn't find an easy tool to find players to create the 'perfect' Inazuma Eleven team: with this library, it's easier than ever.
+Developed to provide a high-efficiency alternative to manual data analysis, this library implements a flexible query engine using function pointers to allow for complex, user-defined filtering and sorting logic across multiple game databases.
 
 > [!CAUTION]
 > This library it's still in early development phase (pre-alpha). Bugs have to be expected.
