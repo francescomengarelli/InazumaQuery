@@ -18,7 +18,7 @@ foreach(TEST_SRC IN LISTS TEST_SOURCES)
 
   add_executable(${TEST_NAME} ${TEST_SRC})
   target_link_libraries(${TEST_NAME}
-    PRIVATE InazumaQuery GTest::gtest_main
+    PRIVATE InazumaQuery
   )
 
   add_test(NAME ${TEST_NAME} COMMAND ${TEST_NAME})

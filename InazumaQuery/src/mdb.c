@@ -66,6 +66,12 @@ ina_mdb_t *ina_mdb_create(char const *csv_path)
     }
 
     ina_csv_t *csv = ina_csv_create(csv_path);
+
+    if(!csv) {
+        INA_STDERR;
+        ina_mdb_destroy(&db);
+        return NULL;
+    }
     for (size_t row = 0; row < ina_csv_row_count(csv); ++row)
     {
         ina_move_t move;
@@ -200,8 +206,8 @@ bool assign_by_col(ina_move_t *mv, size_t col, char const *cell_content)
     {
         int is_block = ina_strcmp_normalised("block", cell_content) == 0;
         int is_dribble = ina_strcmp_normalised("dribble", cell_content) == 0;
-        int is_keeper = ina_strcmp_normalised("fire", cell_content) == 0;
-        int is_shoot = ina_strcmp_normalised("wood", cell_content) == 0;
+        int is_keeper = ina_strcmp_normalised("keeper", cell_content) == 0;
+        int is_shoot = ina_strcmp_normalised("shoot", cell_content) == 0;
 
         if (is_block)
             mv->type = INA_MOVE_TYPE_BLOCK;
@@ -263,7 +269,7 @@ bool assign_by_col(ina_move_t *mv, size_t col, char const *cell_content)
     {
         int is_longshot = ina_strcmp_normalised("longshot", cell_content) == 0;
         int is_shotblock =
-            ina_strcmp_normalised("is_shotblock", cell_content) == 0;
+            ina_strcmp_normalised("shotblock", cell_content) == 0;
         int is_none = ina_strcmp_normalised("", cell_content) == 0;
 
         if (is_longshot)

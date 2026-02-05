@@ -1,4 +1,5 @@
 #include "InazumaQuery/utils/utils.h"
+#include "InazumaQuery/core/core.h"
 
 #include <ctype.h>
 #include <errno.h>
@@ -84,7 +85,7 @@ int ina_strcmp_normalised(char const *a, char const *b)
 {
     size_t na = strlen(a) + 1;
     size_t nb = strlen(b) + 1;
-    char norm1[na], norm2[nb];
+    char norm1[INA_NAME_MAX_LEN], norm2[INA_NAME_MAX_LEN];
 
     ina_normalise_string(a, norm1, na);
     ina_normalise_string(b, norm2, nb);

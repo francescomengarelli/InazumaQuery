@@ -9,6 +9,7 @@ int main()
 {
     clock_t start = clock();
     char *path = INA_DEBUG_DATA_DIR "/players/ie3.csv";
+    printf("Creating DB from data at %s", path);
     ina_csv_t *csv = ina_csv_create(path);
     clock_t end = clock();
 

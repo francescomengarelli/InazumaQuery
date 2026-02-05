@@ -1,4 +1,9 @@
+#if defined(__linux__)
+#  define _POSIX_C_SOURCE 200809L
+#endif
+
 #include "InazumaQuery/utils/hash_map.h"
+
 
 #include <errno.h>
 #include <stdbool.h>

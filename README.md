@@ -1,6 +1,6 @@
 # InazumaQuery
 
-**InazumaQuery** is a performance-oriented C library designed for structured querying and predicate-based filtering of character attribute datasets. 
+**InazumaQuery** is a performance-oriented C library designed for structured querying and predicate-based filtering of character attribute datasets.
 
 Developed to provide a high-efficiency alternative to manual data analysis, this library implements a flexible query engine using function pointers to allow for complex, user-defined filtering and sorting logic across multiple game databases.
 
@@ -26,18 +26,18 @@ Developed to provide a high-efficiency alternative to manual data analysis, this
 
 **Planned features:**
 
-- Create built in compare functions to sort players by 'skills' rather than by statistic (e.g. sorting by general ability to shoot rather than by kick statistic).  
-- Add secondary informations about players (team, recruitment method, recruitment location, skills)
+- Create built in compare functions to sort players by 'skills' rather than by statistic (e.g. sorting by general ability to shoot rather than by kick statistic).
+- Add secondary information about players (team, recruitment method, recruitment location, skills)
 - Allow queries to accept an offset parameter for pagination.
 
 **Known bugs:**
 
-- Some nicknames in the IE3 database and stats in the IE1 database (less than 5% I'd say) are subject to small decryption bugs that might influece accuracy
+- Some nicknames in the IE3 database and stats in the IE1 database (less than 5% I'd say) are subject to small decryption bugs that might influence accuracy
 - Some players are duplicates, this is probably caused by the different versions of the same players depending on the game version
 
 ## Supported platform
 
-Every platform is theroetically supported, as there are no platform specific dependencies, but only MacOS has been tested right now.
+Every platform is theroetically supported, as there are no platform specific dependencies, but only MacOS and Arch Linux has been tested right now.
 
 > [!NOTE]
 > I will create issue templates in the near future so that you can point out bugs you've found.
@@ -62,7 +62,7 @@ git submodule add --depth 1 https://github.com/mengacpp/InazumaQuery.git vendor/
 ```
 
 > [!TIP]
-> If you prefer, you can just clone the repostory. The `--depth 1` command makes sure that you clone just what you need.
+> If you prefer, you can just clone the repository. The `--depth 1` command makes sure that you clone just what you need.
 
 Now, in your `CMakeLists.txt`:
 

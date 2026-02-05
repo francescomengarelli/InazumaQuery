@@ -31,14 +31,14 @@ char *ina_strerrno(ina_errt_t ina_errno)
     {
     case INA_ERRT_STD:
         return strerror(ina_stderrno);
-    case(INA_ERRT_OK); 
-    case(INA_ERRT_PDB_CSV_INVALID_CONTENT) 
-    case(INA_ERRT_MDB_CSV_INVALID_CONTENT) 
-    case(INA_ERRT_PARAM_INVALID) 
-    case(INA_ERRT_PARAM_NULL) 
-    case(INA_ERRT_UNKNOWN) 
-    case(INA_ERRT_HASH_MAP_NOSPACE) 
-    case(INA_ERRT_HASH_MAP_NOTFOUND) 
+    case(INA_ERRT_OK);
+    case(INA_ERRT_PDB_CSV_INVALID_CONTENT)
+    case(INA_ERRT_MDB_CSV_INVALID_CONTENT)
+    case(INA_ERRT_PARAM_INVALID)
+    case(INA_ERRT_PARAM_NULL)
+    case(INA_ERRT_UNKNOWN)
+    case(INA_ERRT_HASH_MAP_NOSPACE)
+    case(INA_ERRT_HASH_MAP_NOTFOUND)
     case(INA_ERRT_LIST_OOB)
     case(INA_ERRT_NOT_IMPL)
     }
@@ -46,12 +46,12 @@ char *ina_strerrno(ina_errt_t ina_errno)
 
 void ina_perror(const char *format, ...) {
     va_list args;
-    
+
     va_start(args, format);
-    
+
     vfprintf(stderr, format, args);
-    
+
     fprintf(stderr, ": %s\n", ina_strerrno(ina_errno));
-    
+
     va_end(args);
 }

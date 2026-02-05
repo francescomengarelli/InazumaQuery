@@ -40,6 +40,8 @@ ina_list_t *ina_list_create(size_t e_size)
     ls->buf_used = 0;
     ls->buf_size = 0;
 
+    ls->buf = NULL;
+
     return ls;
 }
 

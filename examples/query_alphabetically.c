@@ -12,7 +12,7 @@
 // https://github.com/mengacpp/inazuma-api/blob/main/examples/query.c to
 // understand how querying works first
 
-// we use this simple function to calcualte if a has alphabetical priority over
+// we use this simple function to calculate if a has alphabetical priority over
 // b
 int compare(ina_player_t const *a, ina_player_t const *b)
 {
